@@ -3,10 +3,12 @@ package shapes;
 import java.awt.*;
 
 public class Circle extends Ellipse {
+    // constructor
     public Circle(Point center, int radius){
         super(new Point(center.x - radius, center.y - radius), radius*2, radius*2);
     }
 
+    // method of Graphics class (default)
     @Override
     public void draw(Graphics g){
         g.setColor(getBorderColor());

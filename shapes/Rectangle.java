@@ -1,13 +1,14 @@
 package shapes;
 
 public class Rectangle extends Polygon {
+    // constructor
     public Rectangle(Point topLeft, int width, int height){
         addPoint(new Point(topLeft.x, topLeft.y));
         addPoint(new Point(topLeft.x + width, topLeft.y));
         addPoint(new Point(topLeft.x + width, topLeft.y + height));
         addPoint(new Point(topLeft.x, topLeft.y + height));
     }
-
+    // because extends of parent-class
     @Override
     public void refreshShape(Point point){
         setPoint(1, new Point(point.x, getPoint(0).y));

@@ -5,9 +5,10 @@ import java.util.ArrayList;
 
 public class Polyline extends Shape{
     private ArrayList<Point> points = new ArrayList<>();
-
+    // constructor
     public  Polyline(){}
 
+    // when Point-object will be created, him added in ArrayList
     public Polyline(Point point){
         points.add(point);
     }
@@ -15,7 +16,7 @@ public class Polyline extends Shape{
     public void addPoint(Point p){
         points.add(p);
     }
-
+    // setter with condition
     protected void setPoint(int i, Point newPoint){
         if (i < points.size()){
             points.set(i, newPoint);
@@ -25,7 +26,7 @@ public class Polyline extends Shape{
             }
         }
     }
-
+    //Stream Java 8. Find x/y
     protected int[] getXs(){
         return points.stream().mapToInt((s) -> s.x).toArray();
     }
@@ -33,21 +34,22 @@ public class Polyline extends Shape{
     protected int[] getYs(){
         return points.stream().mapToInt((s) -> s.y).toArray();
     }
-
+    // geter
     public Point getPoint(int i){
         return points.get(i);
     }
-
+    // getter of count
     public int getPointsCount(){
         return points.size();
     }
 
-
+    // method templates since the class is the parent
     @Override
     public void refreshShape(Point p){
         addPoint(p);
     }
 
+    // setter
     public void setFinishPoint(Point point){
         if (getPointsCount() < 2){
             addPoint(point);
@@ -61,9 +63,9 @@ public class Polyline extends Shape{
             points.remove(points.size() - 1);
         }
     }
-
+    // method of Graphics class (default)
     public void draw(Graphics g){
         g.setColor(getBorderColor());
-        g.drawPolyline(getXs(), getYs(), getPointsCount());//Stream java 8
+        g.drawPolyline(getXs(), getYs(), getPointsCount());
     }
 }
