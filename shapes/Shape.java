@@ -4,18 +4,18 @@ import java.awt.*;
 
 public abstract class Shape {
     // color setting
-    private Color borderColor;
+    private Color borderColor1;
     // constructor
     public Shape(){
-        borderColor = Color.BLACK;
+        borderColor1 = Color.MAGENTA;
     }
     // getter
-    public Color getBorderColor(){
-        return borderColor;
+    public Color getBorderColor1(){
+        return borderColor1;
     }
     // setter
-    public void setBorderColor(Color borderColor){
-        this.borderColor = borderColor;
+    public void setBorderColor1(Color borderColor){
+        this.borderColor1 = borderColor;
     }
 
     // method templates since the class is the parent

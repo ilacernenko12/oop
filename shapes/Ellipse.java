@@ -38,8 +38,7 @@ public class Ellipse extends Shape{
 
     // method of Graphics class (default)
     public void draw(Graphics g) {
-        g.setColor(getBorderColor());
-
+        g.setColor(Color.BLUE);
         Point topLeft = getTopLeft();
         Point bottomRight = getBottomRight();
 

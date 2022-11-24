@@ -1,5 +1,7 @@
 package shapes;
 
+import java.awt.*;
+
 public class Line extends Polyline {
     // constructors. depending on getting coordinates
     public Line(Point p){

@@ -10,7 +10,7 @@ public class Polygon extends Polyline {
     }
     // method of Graphics class (default)
     public void draw(Graphics g){
-        g.setColor(getBorderColor());
+        g.setColor(Color.cyan);
         g.drawPolygon(getXs(), getYs(), getPointsCount());
     }
 }

@@ -11,7 +11,7 @@ public class Circle extends Ellipse {
     // method of Graphics class (default)
     @Override
     public void draw(Graphics g){
-        g.setColor(getBorderColor());
+        g.setColor(Color.YELLOW);
 
         int width = getBottomRight().x - getTopLeft().x;
         int height = getBottomRight().y - getTopLeft().y;

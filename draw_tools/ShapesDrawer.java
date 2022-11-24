@@ -12,11 +12,12 @@ public class ShapesDrawer extends JPanel {
     DrawTool drawTool;
 
     public ShapesDrawer(){
-        setBackground(Color.WHITE);
+        setBackground(Color.lightGray);
     }
 
+    // remove shapes from the list
     private JButton undoButton = new JButton("Отмена");
-    {
+    {   // event handler
         undoButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -61,7 +62,7 @@ public class ShapesDrawer extends JPanel {
         }
         draw();
     }
-
+    // add shapes from the list
     public void addShape(shapes.Shape f) {
         shapesList.add(f);
     }
